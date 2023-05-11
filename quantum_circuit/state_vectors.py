@@ -1,6 +1,6 @@
 import math
 
-from utils import ground
+from quantum_circuit.utils import ground
 
 class StateVector:
 

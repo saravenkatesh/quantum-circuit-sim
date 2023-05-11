@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "quantum_circuit"
+version = "0.1.0"
+description = ""
+authors = ["Sara Venkatesh <sarajvenkatesh@gmail.com>"]
+readme = "README.md"
+packages = [{include = "quantum_circuit"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.24.3"

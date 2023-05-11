@@ -1,8 +1,7 @@
-from multiprocessing.sharedctypes import Value
 import numpy as np
 import functools
 
-from matrices import ZERO_PROJECTION, ONE_PROJECTION
+from quantum_circuit.matrices import ZERO_PROJECTION, ONE_PROJECTION
 
 def ground(n: int):
     return np.array([1] + (2**n - 1)*[0])
@@ -10,7 +9,6 @@ def ground(n: int):
 def identity(i: int):
     return np.identity(2**i)
 
-@functools.lru_cache
 def create_controlled_gate(qubits, dimension, gate):
     control, target = qubits[0], qubits[1]
 
