@@ -10,6 +10,7 @@ def ground(n: int):
 def identity(i: int):
     return np.identity(2**i)
 
+@functools.lru_cache
 def create_controlled_gate(qubits, dimension, gate):
     control, target = qubits[0], qubits[1]
 

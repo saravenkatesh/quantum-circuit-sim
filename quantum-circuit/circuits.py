@@ -20,7 +20,7 @@ class Circuit:
         self.append_gate(self.CX, qubits)
 
     def cz(self, qubits):
-        self.append_gate(self.CY, qubits)
+        self.append_gate(self.CZ, qubits)
 
     def h(self, qubit):
         self.append_gate(self.HAD, qubit)
