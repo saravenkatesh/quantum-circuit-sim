@@ -1,6 +1,6 @@
 import functools
 
-from quantum_circuit.gate_implementations import GateImplementations
+from quantum_circuit.gates import Gates
 
 
 class Circuit:
@@ -26,7 +26,7 @@ class Circuit:
         self.append_gate(self.HAD, qubit)
 
     def get_implementation(self, gate, number_of_qubits):
-        return getattr(GateImplementations, gate['gate'], lambda: None)(gate['qubits'], number_of_qubits)
+        return getattr(Gates, gate['gate'], lambda: None)(gate['qubits'], number_of_qubits)
         
     def apply(self, gate, state):
         return self.get_implementation(gate, state.number_of_qubits).dot(state.state)

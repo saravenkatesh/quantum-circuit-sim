@@ -4,7 +4,7 @@ import functools
 from quantum_circuit.utils import create_controlled_gate, identity
 from quantum_circuit.matrices import HADAMARD, NOT, PHASE_FLIP
 
-class GateImplementations:
+class Gates:
 
     def hadamard(qubit, total_number_of_qubits):
         matrix_tensor = [identity(1) if i != qubit[0] else HADAMARD for i in range(1, total_number_of_qubits + 1)]
